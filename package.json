@@ -4,7 +4,7 @@
     "name": "Ádám László Rocska",
     "url": "https://adam-rocska.github.io"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight TypeScript utility to create a Promise that resolves after a specified delay.",
   "keywords": [
     "typescript",
