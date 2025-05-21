@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "baseUrl": "..",
+    "paths": {
+      "@adam-rocska/timeout": [ "./src/index.ts" ],
+      "!*": [ "./*" ]
+    }
+  },
+  "include": [ "./**/*.test.ts" ]
+}

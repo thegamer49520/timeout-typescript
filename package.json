@@ -1,0 +1,93 @@
+{
+  "name": "@adam-rocska/timeout",
+  "author": {
+    "name": "Ádám László Rocska",
+    "url": "https://adam-rocska.github.io"
+  },
+  "version": "1.0.0",
+  "description": "A lightweight TypeScript utility to create a Promise that resolves after a specified delay.",
+  "keywords": [
+    "typescript",
+    "javascript",
+    "promise",
+    "timeout",
+    "delay",
+    "async",
+    "await",
+    "node",
+    "browser",
+    "utility"
+  ],
+  "browserslist": [
+    "last 3 years"
+  ],
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/es/index.mjs",
+  "types": "./dist/cjs/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adam-rocska/timeout-typescript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adam-rocska/timeout-typescript/issues"
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/adam-rocska"
+    }
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "bunchee",
+    "test": "jest --env node",
+    "check": "pnpm eslint && pnpm attw --pack"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@10.11.0",
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.1",
+    "@swc/jest": "^0.2.38",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.15.21",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
+    "bunchee": "^6.5.2",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "15.3.2",
+    "eslint-plugin-node": "^11.1.0",
+    "jest": "^29.7.0",
+    "pnpm": "^10.11.0",
+    "rimraf": "^6.0.1",
+    "semver": "^7.7.2",
+    "typescript": "^5.8.3"
+  },
+  "jest": {
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "moduleNameMapper": {
+      "^@adam-rocska/timeout$": "<rootDir>/src/index.ts",
+      "^!(.*)": "<rootDir>/$1"
+    },
+    "transform": {
+      "^.+\\.(t|j)sx?$": [
+        "@swc/jest"
+      ]
+    },
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
+    "testTimeout": 1000
+  }
+}
