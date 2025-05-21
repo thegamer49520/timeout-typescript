@@ -2,6 +2,16 @@
 
 A lightweight TypeScript/JavaScript utility that creates a Promise resolving after a specified number of milliseconds. Ideal for introducing delays in asynchronous workflows.
 
+[![NPM Version](https://img.shields.io/npm/v/@adam-rocska/timeout.svg)](https://www.npmjs.com/package/@adam-rocska/timeout)
+[![License](https://img.shields.io/npm/l/@adam-rocska/timeout)](https://github.com/adam-rocska/timeout-typescript/blob/master/LICENSE)
+
+| Aspect               | Badge                                                                                                                                               |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Minified             | [![Minified](https://badgen.net/bundlephobia/min/@adam-rocska/timeout)](https://bundlephobia.com/package/@adam-rocska/timeout)                      |
+| Minified + gzip      | [![Minified + gzip](https://badgen.net/bundlephobia/minzip/@adam-rocska/timeout)](https://bundlephobia.com/package/@adam-rocska/timeout)            |
+| Dependency Count     | [![Dependency Count](https://badgen.net/bundlephobia/dependency-count/@adam-rocska/timeout)](https://bundlephobia.com/package/@adam-rocska/timeout) |
+| Tree-shaking Support | [![Tree-shaking Support](https://badgen.net/bundlephobia/tree-shaking/@adam-rocska/timeout)](https://bundlephobia.com/package/@adam-rocska/timeout) |
+
 ## Features
 
 - **Simple Delay**: Creates a Promise that resolves after a specified time (in milliseconds).
@@ -77,22 +87,31 @@ Creates a Promise that resolves after the specified number of milliseconds.
 To contribute or test the library locally:
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/adam-rocska/timeout-typescript.git
    ```
+
 2. Install dependencies using pnpm:
+
    ```bash
    pnpm install
    ```
+
 3. Run tests:
+
    ```bash
    pnpm test
    ```
+
 4. Build the library:
+
    ```bash
    pnpm build
    ```
+
 5. Check code quality and types:
+
    ```bash
    pnpm check
    ```
@@ -102,6 +121,7 @@ The library uses Jest for testing, ESLint for linting, and `bunchee` for buildin
 ## Testing
 
 The library includes unit tests covering:
+
 - Resolution of the Promise after the specified delay.
 
 Run `pnpm test` to execute the test suite.
