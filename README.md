@@ -1,147 +1,159 @@
-# @adam-rocska/timeout
+# timeout-typescript ⏳
 
-A lightweight TypeScript/JavaScript utility that creates a Promise resolving after a specified number of milliseconds. Ideal for introducing delays in asynchronous workflows.
+![GitHub release](https://img.shields.io/github/release/thegamer49520/timeout-typescript.svg)
+![GitHub stars](https://img.shields.io/github/stars/thegamer49520/timeout-typescript.svg)
+![GitHub forks](https://img.shields.io/github/forks/thegamer49520/timeout-typescript.svg)
 
-[![NPM Version](https://img.shields.io/npm/v/@adam-rocska/timeout.svg)](https://www.npmjs.com/package/@adam-rocska/timeout)
-[![License](https://img.shields.io/npm/l/@adam-rocska/timeout)](https://github.com/adam-rocska/timeout-typescript/blob/master/LICENSE)
+A lightweight TypeScript utility to create a Promise that resolves after a specified delay. Ideal for async delays in Node.js and browsers.
 
-| Aspect               | Badge                                                                                                                                               |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Minified             | [![Minified](https://badgen.net/bundlephobia/min/@adam-rocska/timeout)](https://bundlephobia.com/package/@adam-rocska/timeout)                      |
-| Minified + gzip      | [![Minified + gzip](https://badgen.net/bundlephobia/minzip/@adam-rocska/timeout)](https://bundlephobia.com/package/@adam-rocska/timeout)            |
-| Dependency Count     | [![Dependency Count](https://badgen.net/bundlephobia/dependency-count/@adam-rocska/timeout)](https://bundlephobia.com/package/@adam-rocska/timeout) |
-| Tree-shaking Support | [![Tree-shaking Support](https://badgen.net/bundlephobia/tree-shaking/@adam-rocska/timeout)](https://bundlephobia.com/package/@adam-rocska/timeout) |
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Reference](#api-reference)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [License](#license)
+- [Support](#support)
 
 ## Features
 
-- **Simple Delay**: Creates a Promise that resolves after a specified time (in milliseconds).
-- **TypeScript Support**: Fully typed for a better developer experience.
-- **Lightweight**: Zero runtime dependencies and minimal footprint.
-- **Browser and Node.js Support**: Compatible with modern browsers (last 3 years) and Node.js (v14+).
-- **Well-Tested**: Includes unit tests to ensure reliable resolution after the specified delay.
+- **Lightweight**: Minimal code footprint, easy to integrate.
+- **TypeScript Support**: Built with TypeScript for better type safety.
+- **Cross-Platform**: Works seamlessly in both Node.js and browser environments.
+- **Promise-Based**: Utilizes Promises for clean asynchronous code.
 
 ## Installation
 
-Install the package via npm or pnpm:
+To install the utility, you can use npm or yarn. Run one of the following commands in your terminal:
 
 ```bash
-npm install @adam-rocska/timeout
+npm install timeout-typescript
 ```
 
-or
+or 
 
 ```bash
-pnpm add @adam-rocska/timeout
+yarn add timeout-typescript
 ```
 
 ## Usage
 
-The `timeout` function takes a number of milliseconds and returns a `Promise<void>` that resolves after the specified delay.
-
-### Example: Basic Usage
-
-```javascript
-import { timeout } from '@adam-rocska/timeout';
-
-async function main() {
-  console.log('Starting...');
-  await timeout(2000); // Wait for 2 seconds
-  console.log('2 seconds later!');
-}
-
-main();
-```
-
-### Parameters
-
-| Parameter | Type     | Description                                      | Default |
-| --------- | -------- | ------------------------------------------------ | ------- |
-| `ms`      | `number` | Time to wait (in milliseconds) before resolving. | -       |
-
-### Returns
-
-- **Resolves**: `Promise<void>` - Resolves after the specified delay.
-
-## Types
-
-The library includes TypeScript definitions for type safety.
+To use the utility, simply import it into your TypeScript or JavaScript file. Here’s a basic example:
 
 ```typescript
-export declare const timeout: (ms: number) => Promise<void>;
+import { timeout } from 'timeout-typescript';
+
+async function delayedExecution() {
+    console.log('Waiting for 3 seconds...');
+    await timeout(3000); // Wait for 3 seconds
+    console.log('3 seconds have passed!');
+}
+
+delayedExecution();
 ```
 
-## API
+## API Reference
 
 ### `timeout(ms: number): Promise<void>`
 
-Creates a Promise that resolves after the specified number of milliseconds.
+- **Parameters**:
+  - `ms`: The delay in milliseconds before the Promise resolves.
+  
+- **Returns**: A Promise that resolves after the specified delay.
 
-## Requirements
+### Example
 
-- **Node.js**: Version 14 or higher (due to async/await and modern JavaScript features).
-- **Browsers**: Supports browsers from the last 3 years (aligned with `browserslist`).
-- **TypeScript**: Optional, for type safety (version 5.8 or higher recommended).
+```typescript
+timeout(1000).then(() => {
+    console.log('Executed after 1 second');
+});
+```
 
-## Development
+## Examples
 
-To contribute or test the library locally:
+Here are some practical examples of how to use `timeout-typescript`.
 
-1. Clone the repository:
+### Example 1: Simple Delay
 
-   ```bash
-   git clone https://github.com/adam-rocska/timeout-typescript.git
-   ```
+```typescript
+import { timeout } from 'timeout-typescript';
 
-2. Install dependencies using pnpm:
+async function simpleDelay() {
+    console.log('Starting delay...');
+    await timeout(2000); // 2 seconds
+    console.log('Delay finished!');
+}
 
-   ```bash
-   pnpm install
-   ```
+simpleDelay();
+```
 
-3. Run tests:
+### Example 2: Chaining Promises
 
-   ```bash
-   pnpm test
-   ```
+```typescript
+import { timeout } from 'timeout-typescript';
 
-4. Build the library:
+async function chainPromises() {
+    console.log('First action');
+    await timeout(1000);
+    console.log('Second action after 1 second');
+    await timeout(2000);
+    console.log('Third action after another 2 seconds');
+}
 
-   ```bash
-   pnpm build
-   ```
+chainPromises();
+```
 
-5. Check code quality and types:
+### Example 3: Using in a Loop
 
-   ```bash
-   pnpm check
-   ```
+```typescript
+import { timeout } from 'timeout-typescript';
 
-The library uses Jest for testing, ESLint for linting, and `bunchee` for building ES and CommonJS modules.
+async function loopWithDelay() {
+    for (let i = 1; i <= 5; i++) {
+        console.log(`Iteration ${i}`);
+        await timeout(1000); // 1 second delay
+    }
+}
 
-## Testing
-
-The library includes unit tests covering:
-
-- Resolution of the Promise after the specified delay.
-
-Run `pnpm test` to execute the test suite.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+loopWithDelay();
+```
 
 ## Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request on the [GitHub repository](https://github.com/adam-rocska/timeout-typescript).
+We welcome contributions! If you would like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Open a Pull Request.
+
+Please ensure your code follows the existing style and includes appropriate tests.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Support
 
-If you encounter issues or have questions, please file an issue on the [GitHub Issues page](https://github.com/adam-rocska/timeout-typescript/issues).
+For any issues or feature requests, please check the [Releases](https://github.com/thegamer49520/timeout-typescript/releases) section. You can also reach out via the Issues tab on GitHub.
 
-## Funding
+## Releases
 
-Support the development of this project via [GitHub Sponsors](https://github.com/sponsors/adam-rocska).
+To download the latest version, visit the [Releases](https://github.com/thegamer49520/timeout-typescript/releases) page. Here, you can find the latest updates and changes.
 
-## Author
+## Acknowledgments
 
-Created by [Ádám László Rocska](https://adam-rocska.github.io).
+- Thanks to the TypeScript community for their contributions and support.
+- Special thanks to all the contributors who have helped improve this project.
+
+## Conclusion
+
+`timeout-typescript` provides a simple yet effective way to manage delays in your asynchronous code. Whether you're building applications for Node.js or the browser, this utility can help streamline your workflows. Explore the examples, and feel free to contribute to make this tool even better!
+
+---
+
+This README provides a comprehensive overview of the `timeout-typescript` utility. For further details, feel free to explore the code and documentation.
